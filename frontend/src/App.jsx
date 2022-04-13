@@ -1,12 +1,17 @@
-import Home from "@pages/Home";
+import NavBar from "./pages/NavBar";
+import MainGrid from "./pages/MainGrid";
+import Footer from "./pages/Footer";
 
-import "./App.css";
+import "./index.css";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <div className="wrapper">
+        <NavBar />
+        <MainGrid />
+      </div>
+      <Footer />
     </div>
   );
 }
