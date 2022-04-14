@@ -1,5 +1,5 @@
 import NavBar from "./pages/NavBar";
-import MainGrid from "./pages/MainGrid";
+import Main from "./pages/Main";
 import Footer from "./pages/Footer";
 
 import "./index.css";
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <NavBar />
-        <MainGrid />
+        <Main />
       </div>
       <Footer />
     </div>

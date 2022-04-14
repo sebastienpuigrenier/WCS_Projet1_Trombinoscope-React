@@ -1,14 +1,25 @@
 import React from "react";
+import { Link } from "react-dom";
 import PropTypes from "prop-types";
 import membres from "../assets/membres";
 import { alphaOrder, formateurFirst } from "../utilities/functions";
+
+const element = document.querySelectorAll(".accueil-photo");
+
+for (let i = 0; i < element.length; i += 1) {
+  element[i].addEventListener("click", () => {
+    console.warn("clicked");
+  });
+}
 
 // Création de la div vignette
 function MiniCard({ photo, nom, prenom }) {
   return (
     <div className="background">
       <div className="accueil-photo image-profil">
-        <img src={photo} className="photo-profil" alt={`${prenom} ${nom}`} />
+        <Link to="/users/wildcoder">
+          <img src={photo} className="photo-profil" alt={`${prenom} ${nom}`} />
+        </Link>
       </div>
     </div>
   );
