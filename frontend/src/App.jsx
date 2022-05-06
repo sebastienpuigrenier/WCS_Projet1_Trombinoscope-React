@@ -1,3 +1,6 @@
+// import { BrowserRouter as Route, Routes } from "react-router-dom";
+// import FicheMembre from "./pages/FicheMembre";
+
 import NavBar from "./pages/NavBar";
 import Main from "./pages/Main";
 import Footer from "./pages/Footer";

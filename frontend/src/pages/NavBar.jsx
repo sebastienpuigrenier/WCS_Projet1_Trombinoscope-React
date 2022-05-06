@@ -9,13 +9,13 @@ function NavBar() {
           <span className="hamburger" />
         </button>
 
-        <a href="./index.html">
+        <Link to="/">
           <img
             src="../../src/assets/img/logo_outsiders.png"
             alt="logo {Out}Siders"
             className="nav-logo"
           />
-        </a>
+        </Link>
       </div>
 
       <ul className="nav__list">

@@ -20,10 +20,7 @@ function Footer() {
         </p>
         <p>
           <i className="far fa-copyright" />
-          Wilders 2022 - &nbsp;
-          <a href="./404.html" className="link404">
-            V1.0 &nbsp;
-          </a>
+          Wilders 2022 - V1.1
         </p>
       </div>
     </footer>

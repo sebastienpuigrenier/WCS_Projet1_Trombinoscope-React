@@ -1,24 +1,18 @@
 import React from "react";
-import { Link } from "react-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import membres from "../assets/membres";
+import membres from "../assets/membres.json";
 import { alphaOrder, formateurFirst } from "../utilities/functions";
 
-const element = document.querySelectorAll(".accueil-photo");
-
-for (let i = 0; i < element.length; i += 1) {
-  element[i].addEventListener("click", () => {
-    console.warn("clicked");
-  });
-}
-
 // Création de la div vignette
-function MiniCard({ photo, nom, prenom }) {
+function MiniCard({ photo, prenom, nom }) {
+  const idMember = prenom.charAt(0).toUpperCase();
+  const altText = `${prenom} ${nom}`;
   return (
     <div className="background">
       <div className="accueil-photo image-profil">
-        <Link to="/users/wildcoder">
-          <img src={photo} className="photo-profil" alt={`${prenom} ${nom}`} />
+        <Link to={`/FicheMembre/${idMember}-${nom.toUpperCase()}`}>
+          <img src={photo} className="photo-profil" alt={altText} />
         </Link>
       </div>
     </div>
@@ -35,15 +29,15 @@ MiniCard.propTypes = {
 function MainGrid() {
   membres.sort(alphaOrder);
   formateurFirst();
-
+  console.warn(membres);
   return (
     <div className="image">
-      {membres.map((person, id) => (
+      {membres.map((person) => (
         <MiniCard
-          key={id.nom}
+          key={person.email}
           photo={person.photo}
           nom={person.nom}
-          prenom={person.photo}
+          prenom={person.prenom}
         />
       ))}
     </div>
